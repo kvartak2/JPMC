@@ -1,0 +1,47 @@
+From 7b7e33129791fafa8f7e0138e8170dd4ab6f3988 Mon Sep 17 00:00:00 2001
+From: Kasturi Vartak <kvartak2@binghamton.edu>
+Date: Sun, 23 Aug 2020 09:38:44 -0400
+Subject: [PATCH] Create Patch File
+
+---
+ .DS_Store      | Bin 0 -> 6148 bytes
+ client_test.py |   5 ++++-
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 .DS_Store
+
+diff --git a/.DS_Store b/.DS_Store
+new file mode 100644
+index 0000000000000000000000000000000000000000..9dcf2a09a6b471605d72e9356434878c2a80ca09
+GIT binary patch
+literal 6148
+zcmeHKJx{|h5PerF6j}+o!I+V$5@KWtRXQ-Rzz+y*S_wpH5g$ctS@<#hK7Ihav#mm$
+zvLZlt(%rK!_iX36ifaHec$^#nJpc(^v9-mp#`L**!&)J;Nfb9mi4jU%Vv3?sZHeEg
+zfbLzFyH(&8&)mDu{VPspi*h_$j9I~-M{7jfe|P3yq{HeNuDI88Jm3(09ih&_YsA^E
+zaSHOLxMy6)J&L$HIKvRf$Z<;S<A!U!!!;&Y;0g2k%(5G?JDg|A`lX9&S1T_OC;76z
+zlKf>f$6Hj-u9+!d3YY?aLIIxHYDw3lMN_~OFa=f$==UL|D`o*JkM7gK;I06~Hq*}7
+z*1Lpq(tugO$|Il9#8Zi$D&dMDp3Zz4>au{9M^A@@%ZG%SCEQTN&Cc;tR}RTMS~LYr
+zfw}@4zT4CDfB60VzfQ8ADPRixD+Q#TpXUR<QaD>1FQ;d1O2441X<g-UMPb7o#jMq%
+cc#rOk`BWRkEMVo48JhhOa57jh1%6b44+A%15C8xG
+
+literal 0
+HcmV?d00001
+
+diff --git a/client_test.py b/client_test.py
+index 10aaa86..c1badc5 100644
+--- a/client_test.py
++++ b/client_test.py
+@@ -46,7 +46,10 @@ class ClientTest(unittest.TestCase):
+     self.assertEqual(getRatio(prices['ABC'], prices['DEF']), (None))
+   """ ------------ Add more unit tests ------------ """
+ 
+-
++  def test_Price_a_zero(self):
++    price_a = 0
++    price_b = 111.1
++    self.assertEqual(getRatio(price_a, price_b),0.0)
+ 
+ if __name__ == '__main__':
+     unittest.main()
+-- 
+2.23.0
+
